@@ -1,4 +1,4 @@
-# Gujarat Research & Innovation Hub
+# Research & Innovation Hub
 
 A comprehensive platform connecting researchers, entrepreneurs, investors, IPR professionals, and government officials to foster innovation and research collaboration in Gujarat.
 
@@ -154,22 +154,3 @@ npm start
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-For any queries or support, please contact:
-- Email: your.email@example.com
-- Website: https://www.example.com
-- Phone: +91-XXXXXXXXXX
-
-## 🙏 Acknowledgments
-
-- Government of Gujarat
-- Academic institutions
-- Research organizations
-- Startup incubators
-- Innovation centers 
