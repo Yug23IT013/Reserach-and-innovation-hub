@@ -234,36 +234,56 @@ async function fetchDashboardData() {
 }
 
 // Initialize Bootstrap modals
-const startupModal = new bootstrap.Modal(document.getElementById('startupModal'));
-const researchModal = new bootstrap.Modal(document.getElementById('researchModal'));
-const iprModal = new bootstrap.Modal(document.getElementById('iprModal'));
+let startupModal;
+let researchModal;
+let iprModal;
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize modals after DOM is loaded
+    startupModal = new bootstrap.Modal(document.getElementById('startupModal'));
+    researchModal = new bootstrap.Modal(document.getElementById('researchModal'));
+    iprModal = new bootstrap.Modal(document.getElementById('iprModal'));
+});
 
 // Modal functions
 function openStartupModal() {
-    startupModal.show();
+    if (startupModal) {
+        startupModal.show();
+    }
 }
 
 function closeStartupModal() {
-    startupModal.hide();
-    document.getElementById('addStartupForm').reset();
+    if (startupModal) {
+        startupModal.hide();
+        document.getElementById('addStartupForm').reset();
+    }
 }
 
 function showAddResearchModal() {
-    researchModal.show();
+    if (researchModal) {
+        researchModal.show();
+    }
 }
 
 function closeResearchModal() {
-    researchModal.hide();
-    document.getElementById('addResearchForm').reset();
+    if (researchModal) {
+        researchModal.hide();
+        document.getElementById('addResearchForm').reset();
+    }
 }
 
 function showAddIPRModal() {
-    iprModal.show();
+    if (iprModal) {
+        iprModal.show();
+    }
 }
 
 function closeIPRModal() {
-    iprModal.hide();
-    document.getElementById('addIPRForm').reset();
+    if (iprModal) {
+        iprModal.hide();
+        document.getElementById('addIPRForm').reset();
+    }
 }
 
 // Display functions
