@@ -36,7 +36,7 @@ async function handleLogin(event) {
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('http://localhost:5001/api/auth/login', {
+        const response = await fetch('https://reserach-and-innovation-hub.onrender.com/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ async function handleRegister(event) {
     }
 
     try {
-        const response = await fetch('http://localhost:5001/api/auth/register', {
+        const response = await fetch('https://reserach-and-innovation-hub.onrender.com/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -188,7 +188,7 @@ async function fetchDashboardData() {
 
         // Fetch research projects
         if (researchSection.style.display === 'block') {
-            const researchResponse = await fetch('http://localhost:5001/api/research', {
+            const researchResponse = await fetch('https://reserach-and-innovation-hub.onrender.com/api/research', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -201,7 +201,7 @@ async function fetchDashboardData() {
 
         // Fetch startups
         if (startupsSection.style.display === 'block') {
-            const startupsResponse = await fetch('http://localhost:5001/api/startups', {
+            const startupsResponse = await fetch('https://reserach-and-innovation-hub.onrender.com/api/startups', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -214,7 +214,7 @@ async function fetchDashboardData() {
 
         // Fetch IPR records
         if (iprSection.style.display === 'block') {
-            const iprResponse = await fetch('http://localhost:5001/api/ipr', {
+            const iprResponse = await fetch('https://reserach-and-innovation-hub.onrender.com/api/ipr', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -430,7 +430,7 @@ async function handleStartupSubmit(event) {
     };
 
     try {
-        const response = await fetch('http://localhost:5001/api/startups', {
+        const response = await fetch('https://reserach-and-innovation-hub.onrender.com/api/startups', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -513,7 +513,7 @@ async function handleResearchSubmit(event) {
 
         console.log('Sending research data:', researchData);
 
-        const response = await fetch('http://localhost:5001/api/research', {
+        const response = await fetch('https://reserach-and-innovation-hub.onrender.com/api/research', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -577,7 +577,7 @@ async function handleIPRSubmit(event) {
             status
         };
 
-        const response = await fetch('http://localhost:5001/api/ipr', {
+        const response = await fetch('https://reserach-and-innovation-hub.onrender.com/api/ipr', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
