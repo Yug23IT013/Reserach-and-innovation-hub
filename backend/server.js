@@ -15,7 +15,14 @@ connectDB();
 
 // CORS Configuration
 app.use(cors({
-    origin: ['http://localhost:5000', 'http://localhost:5001', 'http://127.0.0.1:5000', 'http://127.0.0.1:5001'],
+    origin: [
+        'http://localhost:5000', 
+        'http://localhost:5001', 
+        'http://127.0.0.1:5000', 
+        'http://127.0.0.1:5001',
+        'https://dashing-peony-ce2b66.netlify.app', // Your Netlify domain
+        'https://reserach-and-innovation-hub.onrender.com'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
     credentials: true
